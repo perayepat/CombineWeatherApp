@@ -12,12 +12,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupPublihsers()
         
     }
-    private func setupPublihser(){
+    private func setupPublihsers(){
         ///we are going to use this publisher to notify us when we can update and make changes to the main app
         ///Debounce allows you to wait for a amount of time and then do somthing
         ///For assigning and updating multiple items on the screen the sink is the best option
+        ///`addPercentEncoding` for cities that have  a space in between them
         let publisher  = NotificationCenter.default.publisher(for: UITextField.textDidChangeNotification,object: self.cityTextField)
         
         self.cancellable = publisher.compactMap{
@@ -31,7 +33,7 @@ class ViewController: UIViewController {
                 .map{$0}
         }
         .sink{
-            self.weatherTempLabel.text = "\($0.temp) 𝇋"
+            self.weatherTempLabel.text = "\($0.temp ?? 0.0) 𝇋"
         }
     }
 }
