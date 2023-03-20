@@ -33,7 +33,12 @@ class ViewController: UIViewController {
                 .map{$0}
         }
         .sink{
-            self.weatherTempLabel.text = "\($0.temp ?? 0.0) 𝇋"
+            if let temp = $0.temp{
+                self.weatherTempLabel.text = "\(temp) 𝇋"
+            } else{
+                self.weatherTempLabel.text = "Area not found"
+            }
+            
         }
     }
 }
