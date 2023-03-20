@@ -22,17 +22,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PYK-NJ-imJ">
+                                <rect key="frame" x="16" y="383" width="361" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="xpP-Os-Pth" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="377" id="PvE-tX-9Bz"/>
+                            <constraint firstItem="PYK-NJ-imJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="aFR-u4-DWs"/>
                             <constraint firstItem="xpP-Os-Pth" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="mO3-xL-DpM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xpP-Os-Pth" secondAttribute="bottom" constant="361" id="oOp-Cp-Jjt"/>
+                            <constraint firstItem="PYK-NJ-imJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="324" id="qMP-c9-fW1"/>
                             <constraint firstItem="xpP-Os-Pth" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="sgB-iL-Ed2"/>
+                            <constraint firstItem="PYK-NJ-imJ" firstAttribute="trailing" secondItem="xpP-Os-Pth" secondAttribute="trailing" id="ufz-xj-lT5"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cityTextField" destination="PYK-NJ-imJ" id="wHy-P6-2Gu"/>
                         <outlet property="weatherTempLabel" destination="xpP-Os-Pth" id="Si8-o1-5Wh"/>
                     </connections>
                 </viewController>
